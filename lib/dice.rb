@@ -10,5 +10,15 @@ class Dice
 		@@history.push(@roll)
 	end
 
+	def score 
+		total = []
+		@@history.each do |roll|
+			total.push(roll) 
+		end
+		# sum each roll
+		# sum total roll
+		total.flatten.sum
+		
+	end 
 
 end

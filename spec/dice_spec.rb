@@ -26,4 +26,13 @@ describe Dice do
 	  dice.roll(4)
 		expect(dice.save_roll).to be_instance_of Array
 	end
+
+	it "should return a score for all rolls" do
+		dice = subject
+		dice.roll(4)
+		dice.save_roll
+		dice.roll(3)
+		dice.save_roll		
+		expect(dice.score).to be_instance_of Integer
+	end
 end
