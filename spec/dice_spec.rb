@@ -24,15 +24,14 @@ describe Dice do
 	it "should record all dice rolls" do
 		dice = subject
 	  dice.roll(4)
-		expect(dice.save_roll).to be_instance_of Array
+		expect(dice.view_roll).to be_instance_of Array
 	end
 
 	it "should return a score for all rolls" do
 		dice = subject
 		dice.roll(4)
-		dice.save_roll
 		dice.roll(3)
-		dice.save_roll		
+		dice.view_roll		
 		expect(dice.score).to be_instance_of Integer
 	end
 end
